@@ -1,0 +1,20 @@
+{
+  "name": "cognito-triggers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.525.0",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.11.25",
+    "axios": "^1.6.7",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.1.0",
+    "querystring": "^0.2.1"
+  }
+}

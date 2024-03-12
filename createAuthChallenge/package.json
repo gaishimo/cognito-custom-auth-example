@@ -1,0 +1,18 @@
+{
+  "name": "pre-sign-up",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc && (cd dist; zip -q ../function.zip ./*.js) && zip -rq function.zip node_modules",
+    "deploy": "yarn build && aws lambda update-function-code --function-name createAuthChallenge --zip-file fileb://./function.zip"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.525.0",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1566.0",
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.3",
+    "@types/aws-lambda": "^8.10.134"
+  }
+}
